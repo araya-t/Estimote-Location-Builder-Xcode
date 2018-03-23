@@ -95,41 +95,85 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        // 4th wall = UWB lemon
 
 
-        
 //*************************************************************************************
         
         
 // 4. Half room 6Beacons & Place beacon at corner ------------------------------------
-        locationBuilder.setLocationName("6Bea.halfroom.mix")
-
+//        locationBuilder.setLocationName("6Bea.halfroom.mix")
+//
+//        locationBuilder.setLocationBoundaryPoints([
+//            EILPoint(x: 0.00, y: 0.00),
+//            EILPoint(x: 9.58, y: 0.00),
+//            EILPoint(x: 9.58, y: 3.64),
+//            EILPoint(x: 0.00, y: 3.64)])
+//
+//        locationBuilder.addBeacon(withIdentifier: "59b0ed468dcd44a8de7ca8a8b0168f15", atBoundarySegmentIndex: 0, inDistance: 5.00, from: .rightSide)
+//        // 1st wall = location beetroot
+//
+//        locationBuilder.addBeacon(withIdentifier: "4c52ecc0483a9fe0383d64d85b347e10", atBoundarySegmentIndex: 0, inDistance: 0.31, from: .leftSide)
+//        // 1st wall = UWB candy
+//
+//        locationBuilder.addBeacon(withIdentifier: "dfa9e226018a176277f4bd3b24324b2a", atBoundarySegmentIndex: 1, inDistance: 0.40, from: .leftSide)
+//        // 2nd wall = UWB coconut
+//
+//        locationBuilder.addBeacon(withIdentifier: "4dee5e2096779f290282ff45d468c215", atBoundarySegmentIndex: 2, inDistance: 5.00, from: .leftSide)
+//        // 3rd wall = location candy
+//
+//        locationBuilder.addBeacon(withIdentifier: "9408e423c57601e82f2923a6f86d0a06", atBoundarySegmentIndex: 2, inDistance: 0.30, from: .leftSide)
+//        // 3rd wall = UWB beetroot
+//
+//
+//        locationBuilder.addBeacon(withIdentifier: "8894116048c15b09728a020b386ae918", atBoundarySegmentIndex: 3, inDistance: 0.62, from: .leftSide)
+//        // 4th wall = UWB lemon
+        
+        
+//*************************************************************************************
+        
+        
+// 5. Test place beacon on the pillar of parking lot building
+        locationBuilder.setLocationName("Place.6B.on.Pillar")
         locationBuilder.setLocationBoundaryPoints([
-            EILPoint(x: 0.00, y: 0.00),
-            EILPoint(x: 9.58, y: 0.00),
-            EILPoint(x: 9.58, y: 3.64),
-            EILPoint(x: 0.00, y: 3.64)])
-
-        locationBuilder.addBeacon(withIdentifier: "59b0ed468dcd44a8de7ca8a8b0168f15", atBoundarySegmentIndex: 0, inDistance: 5.00, from: .rightSide)
-        // 1st wall = location beetroot
-
-        locationBuilder.addBeacon(withIdentifier: "4c52ecc0483a9fe0383d64d85b347e10", atBoundarySegmentIndex: 0, inDistance: 0.31, from: .leftSide)
-        // 1st wall = UWB candy
-
-        locationBuilder.addBeacon(withIdentifier: "dfa9e226018a176277f4bd3b24324b2a", atBoundarySegmentIndex: 1, inDistance: 0.40, from: .leftSide)
-        // 2nd wall = UWB coconut
-
-        locationBuilder.addBeacon(withIdentifier: "4dee5e2096779f290282ff45d468c215", atBoundarySegmentIndex: 2, inDistance: 5.00, from: .leftSide)
-        // 3rd wall = location candy
+            EILPoint(x: 0.00,y: 0.00),
+            EILPoint(x: 0.00, y: 20.00),
+            EILPoint(x: 8.00, y: 20.00),
+            EILPoint(x: 8.00, y: 16.50),
+            EILPoint(x: 9.00, y: 16.50),
+            EILPoint(x: 9.00, y: 20.00),
+            EILPoint(x: 17.00,y: 20.00),
+            EILPoint(x: 17.00,y: 16.50),
+            EILPoint(x: 18.00,y: 16.50),
+            EILPoint(x: 18.00,y: 20.00),
+            EILPoint(x: 26.00,y: 20.00),
+            EILPoint(x: 26.00,y: 0.00),
+            EILPoint(x: 18.00,y: 0.00),
+            EILPoint(x: 18.00,y: 3.50),
+            EILPoint(x: 17.00,y: 3.50),
+            EILPoint(x: 17.00,y: 0.00), ])
         
-        locationBuilder.addBeacon(withIdentifier: "9408e423c57601e82f2923a6f86d0a06", atBoundarySegmentIndex: 2, inDistance: 0.30, from: .leftSide)
-        // 3rd wall = UWB beetroot
+        locationBuilder.addBeacon(withIdentifier: "8894116048c15b09728a020b386ae918", atBoundarySegmentIndex: 0, inDistance: 10.00, from: .rightSide)
+        // BSI:0 = UWB lemon
+        
+        locationBuilder.addBeacon(withIdentifier: "59b0ed468dcd44a8de7ca8a8b0168f15", atBoundarySegmentIndex: 3, inDistance: 0.50, from: .rightSide)
+            // BSI:3 = location beetroot
+        
+        locationBuilder.addBeacon(withIdentifier: "4c52ecc0483a9fe0383d64d85b347e10", atBoundarySegmentIndex: 7, inDistance: 0.50, from: .leftSide)
+            // BSI:7 = UWB candy
+        
+        locationBuilder.addBeacon(withIdentifier: "dfa9e226018a176277f4bd3b24324b2a", atBoundarySegmentIndex: 13, inDistance: 0.50, from: .leftSide)
+        // BSI:13 = UWB coconut
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
-
-        locationBuilder.addBeacon(withIdentifier: "8894116048c15b09728a020b386ae918", atBoundarySegmentIndex: 3, inDistance: 0.62, from: .leftSide)
-        // 4th wall = UWB lemon
         
-        
-        
-        locationBuilder.setLocationOrientation(266)
+//        locationBuilder.setLocationOrientation(266)
         
         
         let location = locationBuilder.build()
