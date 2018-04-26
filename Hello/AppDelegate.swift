@@ -174,77 +174,209 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        // 6. Create Parking lot map: floor 10B
-        locationBuilder.setLocationName("10B:14Floors_ParkingLotMap")
+//        // 6. Create Parking lot map: floor 10B
+//        locationBuilder.setLocationName("10B:14Floors_ParkingLotMap")
+//        locationBuilder.setLocationBoundaryPoints([
+//            EILPoint(x: 0.00,y: 0.00),
+//            EILPoint(x: 0.00, y: 16.15),
+//
+//            EILPoint(x: 9.00, y: 16.15),
+//            EILPoint(x: 9.00, y: 12.55),
+//
+//            EILPoint(x: 9.50, y: 12.55),
+//            EILPoint(x: 9.50, y: 16.15),
+//
+//            EILPoint(x: 17.00,y: 16.15),
+//            EILPoint(x: 17.00,y: 12.55),
+//
+//            EILPoint(x: 17.50,y: 12.55),
+//            EILPoint(x: 17.50,y: 16.15),
+//
+//            EILPoint(x: 25.00,y: 16.15),
+//            EILPoint(x: 25.00,y: 12.55),
+//
+//            EILPoint(x: 25.50,y: 12.55),
+//            EILPoint(x: 25.50,y: 16.15),
+//
+//            EILPoint(x: 33.00,y: 16.15),
+//            EILPoint(x: 33.00,y: 12.55),
+//
+//            EILPoint(x: 33.50,y: 12.55),
+//            EILPoint(x: 33.50,y: 16.15),
+//
+//            EILPoint(x: 41.00,y: 16.15),
+//            EILPoint(x: 41.00,y: 0.00),
+//
+//            EILPoint(x: 33.50,y: 0.00),
+//            EILPoint(x: 33.50,y: 3.60),
+//
+//            EILPoint(x: 33.00,y: 3.60),
+//            EILPoint(x: 33.00,y: 0.00),
+//
+//            EILPoint(x: 25.50,y: 0.00),
+//            EILPoint(x: 25.50,y: 3.60),
+//
+//            EILPoint(x: 25.00,y: 3.60),
+//            EILPoint(x: 25.00,y: 0.00),
+//
+//            EILPoint(x: 17.50,y: 0.00),
+//            EILPoint(x: 17.50,y: 3.60),
+//
+//            EILPoint(x: 17.00,y: 3.60),
+//            EILPoint(x: 17.00,y: 0.00), ])
+//
+//        locationBuilder.addBeacon(withIdentifier: UWB_beetroot, atBoundarySegmentIndex: 3, inDistance: 0.25, from: .rightSide)
+//        // BSI:3 = UWB_beetroot
+//
+//        locationBuilder.addBeacon(withIdentifier: LOC_beetroot, atBoundarySegmentIndex: 7, inDistance: 0.25, from: .rightSide)
+//        // BSI:7 = LOC_beetroot
+//
+//        locationBuilder.addBeacon(withIdentifier: UWB_lemon, atBoundarySegmentIndex: 11, inDistance: 0.25, from: .rightSide)
+//        // BSI:11 = UWB_lemon
+//
+//        locationBuilder.addBeacon(withIdentifier: LOC_Lemon, atBoundarySegmentIndex: 15, inDistance: 0.25, from: .rightSide)
+//        // BSI:15 = LOC_Lemon
+//
+//        locationBuilder.addBeacon(withIdentifier: UWB_candy, atBoundarySegmentIndex: 21, inDistance: 0.25, from: .rightSide)
+//        // BSI:21 = UWB_candy
+//
+//        locationBuilder.addBeacon(withIdentifier: LOC_candy, atBoundarySegmentIndex: 25, inDistance: 0.25, from: .rightSide)
+//        // BSI:25 = LOC_candy
+//
+//        locationBuilder.addBeacon(withIdentifier: UWB_coconut, atBoundarySegmentIndex: 29, inDistance: 0.25, from: .rightSide)
+//        // BSI:29 = UWB_coconut
+
+
+////*************************************************************************************
+//
+//
+//
+//        // 7. six slots from all: Floor 10B
+//        locationBuilder.setLocationName("six slots from all: Floor 10B")
+//        locationBuilder.setLocationBoundaryPoints([
+//            EILPoint(x: 0.00,y: 0.00),
+//            EILPoint(x: 0.00, y: 16.15),
+//
+//            EILPoint(x: 9.00, y: 16.15),
+//            EILPoint(x: 9.00, y: 12.55),
+//
+//            EILPoint(x: 9.50, y: 12.55),
+//            EILPoint(x: 9.50, y: 16.15),
+//
+//            EILPoint(x: 17.00,y: 16.15),
+//            EILPoint(x: 17.00,y: 12.55),
+//
+//            EILPoint(x: 17.50,y: 12.55),
+//            EILPoint(x: 17.50,y: 16.15),
+//
+//            EILPoint(x: 25.00,y: 16.15),
+//            EILPoint(x: 25.00,y: 12.55),
+//
+//            EILPoint(x: 25.50,y: 12.55),
+//            EILPoint(x: 25.50,y: 16.15),
+//
+//            EILPoint(x: 33.00,y: 16.15),
+//            EILPoint(x: 33.00,y: 12.55),
+//
+//            EILPoint(x: 33.50,y: 12.55),
+//            EILPoint(x: 33.50,y: 16.15),
+//
+//            EILPoint(x: 41.00,y: 16.15),
+//            EILPoint(x: 41.00,y: 0.00),
+//
+//            EILPoint(x: 33.50,y: 0.00),
+//            EILPoint(x: 33.50,y: 3.60),
+//
+//            EILPoint(x: 33.00,y: 3.60),
+//            EILPoint(x: 33.00,y: 0.00),
+//
+//            EILPoint(x: 25.50,y: 0.00),
+//            EILPoint(x: 25.50,y: 3.60),
+//
+//            EILPoint(x: 25.00,y: 3.60),
+//            EILPoint(x: 25.00,y: 0.00),
+//
+//            EILPoint(x: 17.50,y: 0.00),
+//            EILPoint(x: 17.50,y: 3.60),
+//
+//            EILPoint(x: 17.00,y: 3.60),
+//            EILPoint(x: 17.00,y: 0.00), ])
+//
+//
+//        locationBuilder.addBeacon(withIdentifier: UWB_beetroot, atBoundarySegmentIndex: 7, inDistance: 0.25, from: .rightSide)
+//        // BSI:7 = UWB_beetroot
+//
+//        locationBuilder.addBeacon(withIdentifier: LOC_beetroot, atBoundarySegmentIndex: 9, inDistance: 3.75, from: .rightSide)
+//        // BSI:9 = LOC_beetroot
+//
+//        locationBuilder.addBeacon(withIdentifier: UWB_lemon, atBoundarySegmentIndex: 11, inDistance: 0.25, from: .rightSide)
+//        // BSI:11 = UWB_lemon
+//
+//        locationBuilder.addBeacon(withIdentifier: LOC_Lemon, atBoundarySegmentIndex: 25, inDistance: 0.25, from: .rightSide)
+//        // BSI:25 = LOC_Lemon
+//
+//        locationBuilder.addBeacon(withIdentifier: UWB_candy, atBoundarySegmentIndex: 27, inDistance: 3.75, from: .rightSide)
+//        // BSI:27 = UWB_candy
+//
+//        locationBuilder.addBeacon(withIdentifier: LOC_candy, atBoundarySegmentIndex: 29, inDistance: 0.25, from: .rightSide)
+//        // BSI:29 = LOC_candy
+        
+
+        
+//*************************************************************************************
+        
+        
+        
+        // 8. six slots only: Floor 10B
+        locationBuilder.setLocationName("six slots from all: Floor 10B")
         locationBuilder.setLocationBoundaryPoints([
             EILPoint(x: 0.00,y: 0.00),
-            EILPoint(x: 0.00, y: 16.15),
+            EILPoint(x: 0.00, y: 3.60),
             
-            EILPoint(x: 9.00, y: 16.15),
-            EILPoint(x: 9.00, y: 12.55),
+            EILPoint(x: 0.50, y: 3.60),
+            EILPoint(x: 0.50, y: 0.00),
             
-            EILPoint(x: 9.50, y: 12.55),
-            EILPoint(x: 9.50, y: 16.15),
+            EILPoint(x: 8.00, y: 0.00),
+            EILPoint(x: 8.00, y: 3.60),
             
-            EILPoint(x: 17.00,y: 16.15),
-            EILPoint(x: 17.00,y: 12.55),
+            EILPoint(x: 8.50,y: 3.60),
+            EILPoint(x: 8.50,y: 0.00)
             
-            EILPoint(x: 17.50,y: 12.55),
-            EILPoint(x: 17.50,y: 16.15),
+//          ..........
             
-            EILPoint(x: 25.00,y: 16.15),
-            EILPoint(x: 25.00,y: 12.55),
+            ])
             
-            EILPoint(x: 25.50,y: 12.55),
-            EILPoint(x: 25.50,y: 16.15),
-            
-            EILPoint(x: 33.00,y: 16.15),
-            EILPoint(x: 33.00,y: 12.55),
-            
-            EILPoint(x: 33.50,y: 12.55),
-            EILPoint(x: 33.50,y: 16.15),
-            
-            EILPoint(x: 41.00,y: 16.15),
-            EILPoint(x: 41.00,y: 0.00),
-            
-            EILPoint(x: 33.50,y: 0.00),
-            EILPoint(x: 33.50,y: 3.60),
-            
-            EILPoint(x: 33.00,y: 3.60),
-            EILPoint(x: 33.00,y: 0.00),
-            
-            EILPoint(x: 25.50,y: 0.00),
-            EILPoint(x: 25.50,y: 3.60),
-            
-            EILPoint(x: 25.00,y: 3.60),
-            EILPoint(x: 25.00,y: 0.00),
-            
-            EILPoint(x: 17.50,y: 0.00),
-            EILPoint(x: 17.50,y: 3.60),
-            
-            EILPoint(x: 17.00,y: 3.60),
-            EILPoint(x: 17.00,y: 0.00), ])
         
-        locationBuilder.addBeacon(withIdentifier: UWB_beetroot, atBoundarySegmentIndex: 3, inDistance: 0.25, from: .rightSide)
-        // BSI:3 = UWB_beetroot
         
-        locationBuilder.addBeacon(withIdentifier: LOC_beetroot, atBoundarySegmentIndex: 7, inDistance: 0.25, from: .rightSide)
-        // BSI:7 = LOC_beetroot
+        locationBuilder.addBeacon(withIdentifier: UWB_beetroot, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
+        // BSI: = UWB_beetroot
         
-        locationBuilder.addBeacon(withIdentifier: UWB_lemon, atBoundarySegmentIndex: 11, inDistance: 0.25, from: .rightSide)
-        // BSI:11 = UWB_lemon
+        locationBuilder.addBeacon(withIdentifier: LOC_beetroot, atBoundarySegmentIndex: 0, inDistance: 3.75, from: .rightSide)
+        // BSI: = LOC_beetroot
         
-        locationBuilder.addBeacon(withIdentifier: LOC_Lemon, atBoundarySegmentIndex: 15, inDistance: 0.25, from: .rightSide)
-        // BSI:15 = LOC_Lemon
+        locationBuilder.addBeacon(withIdentifier: UWB_lemon, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
+        // BSI: = UWB_lemon
         
-        locationBuilder.addBeacon(withIdentifier: UWB_candy, atBoundarySegmentIndex: 21, inDistance: 0.25, from: .rightSide)
-        // BSI:21 = UWB_candy
+        locationBuilder.addBeacon(withIdentifier: LOC_Lemon, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
+        // BSI: = LOC_Lemon
         
-        locationBuilder.addBeacon(withIdentifier: LOC_candy, atBoundarySegmentIndex: 25, inDistance: 0.25, from: .rightSide)
-        // BSI:25 = LOC_candy
+        locationBuilder.addBeacon(withIdentifier: UWB_candy, atBoundarySegmentIndex: 0, inDistance: 3.75, from: .rightSide)
+        // BSI: = UWB_candy
         
-        locationBuilder.addBeacon(withIdentifier: UWB_coconut, atBoundarySegmentIndex: 29, inDistance: 0.25, from: .rightSide)
-        // BSI:29 = UWB_coconut
+        locationBuilder.addBeacon(withIdentifier: LOC_candy, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
+        // BSI: = LOC_candy
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
