@@ -328,60 +328,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // 8. six slots only: Floor 10B
-        locationBuilder.setLocationName("six slots from all: Floor 10B")
+        locationBuilder.setLocationName("six slots only: Floor 10B")
         locationBuilder.setLocationBoundaryPoints([
-            EILPoint(x: 0.00,y: 0.00),
             EILPoint(x: 0.00, y: 3.60),
-            
             EILPoint(x: 0.50, y: 3.60),
+            
             EILPoint(x: 0.50, y: 0.00),
-            
             EILPoint(x: 8.00, y: 0.00),
+            
             EILPoint(x: 8.00, y: 3.60),
+            EILPoint(x: 8.50, y: 3.60),
             
-            EILPoint(x: 8.50,y: 3.60),
-            EILPoint(x: 8.50,y: 0.00)
+            EILPoint(x: 8.50,y: 12.55),
+            EILPoint(x: 8.00,y: 12.55),
             
-//          ..........
+            EILPoint(x: 8.00,y: 16.15),
+            EILPoint(x: 0.50,y: 16.15),
             
-            ])
+            EILPoint(x: 0.50,y: 12.55),
+            EILPoint(x: 0.00,y: 12.55)   ])
             
-        
-        
-        locationBuilder.addBeacon(withIdentifier: UWB_beetroot, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
-        // BSI: = UWB_beetroot
-        
-        locationBuilder.addBeacon(withIdentifier: LOC_beetroot, atBoundarySegmentIndex: 0, inDistance: 3.75, from: .rightSide)
-        // BSI: = LOC_beetroot
-        
-        locationBuilder.addBeacon(withIdentifier: UWB_lemon, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
-        // BSI: = UWB_lemon
-        
-        locationBuilder.addBeacon(withIdentifier: LOC_Lemon, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
-        // BSI: = LOC_Lemon
-        
-        locationBuilder.addBeacon(withIdentifier: UWB_candy, atBoundarySegmentIndex: 0, inDistance: 3.75, from: .rightSide)
-        // BSI: = UWB_candy
         
         locationBuilder.addBeacon(withIdentifier: LOC_candy, atBoundarySegmentIndex: 0, inDistance: 0.25, from: .rightSide)
-        // BSI: = LOC_candy
+        // BSI: 0 = LOC_candy
         
+        locationBuilder.addBeacon(withIdentifier: UWB_candy, atBoundarySegmentIndex: 2, inDistance: 3.75, from: .rightSide)
+        // BSI: 2 = UWB_candy
         
+        locationBuilder.addBeacon(withIdentifier: LOC_Lemon, atBoundarySegmentIndex: 4, inDistance: 0.25, from: .rightSide)
+        // BSI: 4 = LOC_Lemon
         
+        locationBuilder.addBeacon(withIdentifier: UWB_lemon, atBoundarySegmentIndex: 6, inDistance: 0.25, from: .rightSide)
+        // BSI: 6 = UWB_lemon
         
+        locationBuilder.addBeacon(withIdentifier: LOC_beetroot, atBoundarySegmentIndex: 8, inDistance: 3.75, from: .rightSide)
+        // BSI: 8 = LOC_beetroot
         
-        
-        
-        
-        
-        
-        
-        
-        
+        locationBuilder.addBeacon(withIdentifier: UWB_beetroot, atBoundarySegmentIndex: 10, inDistance: 0.25, from: .rightSide)
+        // BSI: 10 = LOC_candy
         
         
         //        locationBuilder.setLocationOrientation(266)
-        
         
         
         let location = locationBuilder.build()
